@@ -1,7 +1,7 @@
 # Social Media API
 
 ## Description
-REST API for a social media site, Uses MongoDB, Mongoose, and Express,
+REST API for a social media site, Uses MongoDB, Mongoose, Moment, and Express
 
 ## Tutorial Video
 https://youtu.be/IenJlnggJcY
