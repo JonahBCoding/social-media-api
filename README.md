@@ -3,7 +3,7 @@
 ## Description
 REST API for a social media site, Uses MongoDB, Mongoose, and Express,
 
-##Tutorial Video
+## Tutorial Video
 https://youtu.be/IenJlnggJcY
 
 ## Packages
