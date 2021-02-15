@@ -1,19 +1,10 @@
-const express = require('express');
-const mongoose = require('mongoose');
+const router = require('express').Router();
+const apiRoutes = require('./api/');
 
-const app = express();
-const PORT = process.env.PORT || 3001;
+router.use('/api', apiRoutes);
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(require('./routes'));
+router.use((req, res) => {
+    res.status(404).send('<h1>😝 404 Error!</h1>');
+})
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-media-api', {
-    useFindAndModify: false,
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
-
-mongoose.set('debug', true);
-
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+module.exports = router;
